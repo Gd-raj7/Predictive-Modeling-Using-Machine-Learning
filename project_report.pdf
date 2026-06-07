@@ -1,0 +1,46 @@
+# Employee Attrition Prediction Using Machine Learning
+
+## Introduction
+
+Employee attrition is one of the major challenges faced by organizations. High attrition rates can increase recruitment costs and reduce organizational productivity. This project aims to predict employee attrition using machine learning techniques.
+
+## Dataset Description
+
+The IBM HR Employee Attrition dataset contains employee demographic, professional, and satisfaction-related information. The target variable is Attrition, which indicates whether an employee left the company.
+
+## Data Cleaning and Preprocessing
+
+The dataset was examined for missing values and duplicate records. No missing values or duplicate records were found. Constant-value columns such as EmployeeCount, Over18, and StandardHours were removed. EmployeeNumber was also removed because it served only as an identifier.
+
+Categorical variables were converted into numerical form using One-Hot Encoding.
+
+## Exploratory Data Analysis
+
+Key observations include:
+
+* Employees working overtime were more likely to leave the company.
+* Employees with lower monthly income showed higher attrition rates.
+* Low job satisfaction was associated with increased attrition.
+* Poor work-life balance contributed to employee turnover.
+* Employees who left generally had fewer years of service.
+
+## Model Development
+
+A Random Forest Classifier was used to predict employee attrition. The dataset was split into training and testing sets using an 80:20 ratio.
+
+## Results
+
+Accuracy Score: 87.76%
+
+ROC-AUC Score: 0.753
+
+Confusion Matrix:
+
+[[254, 1],
+[35, 4]]
+
+The model performed well in predicting employees who stayed but showed limited performance in identifying employees who left due to class imbalance.
+
+## Conclusion
+
+The project successfully demonstrated the complete machine learning workflow, including data cleaning, preprocessing, exploratory data analysis, model training, and evaluation. The findings indicate that overtime, salary, job satisfaction, and work-life balance are important factors affecting employee attrition. Future improvements may include advanced feature engineering, hyperparameter tuning, and techniques for handling class imbalance.
